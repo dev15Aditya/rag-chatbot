@@ -8,15 +8,6 @@ import gradio as gr
 import os
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, pipeline
 from langchain_community.llms import HuggingFacePipeline
-# from dotenv import load_dotenv
-
-# try:
-#     load_dotenv()
-#     if not os.getenv("HF_TOKEN"):
-#         raise ValueError("Missing HF_TOKEN in .env")
-# except Exception as e:
-#     print(f"Error loading .env: {e}")
-#     exit(1)
 
 def load_docs(folder_path="docs"):
     loaders = [PyPDFLoader, CSVLoader]
